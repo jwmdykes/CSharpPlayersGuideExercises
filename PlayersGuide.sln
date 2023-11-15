@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# 
+#
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenseOfConsolas", "DefenseOfConsolas\DefenseOfConsolas.csproj", "{04A4A9B3-342C-409E-82E5-0F0CABA5FF29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Level9", "Level9\Level9.csproj", "{178260EC-4BE8-4D78-8E63-DC41B2536643}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +15,9 @@ Global
 		{04A4A9B3-342C-409E-82E5-0F0CABA5FF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A4A9B3-342C-409E-82E5-0F0CABA5FF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A4A9B3-342C-409E-82E5-0F0CABA5FF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178260EC-4BE8-4D78-8E63-DC41B2536643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178260EC-4BE8-4D78-8E63-DC41B2536643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178260EC-4BE8-4D78-8E63-DC41B2536643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178260EC-4BE8-4D78-8E63-DC41B2536643}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
