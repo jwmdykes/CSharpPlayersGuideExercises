@@ -8,12 +8,6 @@
 //
 // Color c1 = new() { R = 255, G = 0, B = 128 };
 // Color c2 = new(1, 2, 3);
-// Color c3 = Color.Orange;
-//
-// Console.ForegroundColor = ConsoleColor.Yellow;
-// Console.WriteLine(c1);
-// Console.WriteLine(c2);
-// Console.WriteLine(c3);
 
 int deckSize = Enum.GetValues(typeof(CardColor)).Length * Enum.GetValues(typeof(CardRank)).Length;
 var deck = new Card[deckSize];
@@ -23,7 +17,7 @@ foreach (CardColor color in Enum.GetValues(typeof(CardColor)))
 {
     foreach (CardRank rank in Enum.GetValues(typeof(CardRank)))
     {
-        deck[index] = new Card() { Color = color, Rank = rank };
+        deck[index] = new Card(rank, color);
         index++;
     }
 }
@@ -64,8 +58,14 @@ internal class Card
 {
     public override string ToString() => $"{Color} {Rank} card.";
     
-    public CardColor Color { set; get; }
-    public CardRank Rank { set; get; }
+    public CardColor Color { get; }
+    public CardRank Rank { get; }
+
+    public Card(CardRank rank, CardColor color)
+    {
+        Rank = rank;
+        Color = color;
+    }
 
     public bool IsSymbolCard => Rank switch
     {
@@ -90,9 +90,9 @@ internal class Color
 
     public override string ToString() => $"#{R:x2}{G:x2}{B:x2}";
 
-    public byte R { get; set; }
-    public byte G { get; set; }
-    public byte B { get; set; }
+    public byte R { get;  }
+    public byte G { get;  }
+    public byte B { get;  }
 
     public Color() : this(0, 0, 0)
     {
