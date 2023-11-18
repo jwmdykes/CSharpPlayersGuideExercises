@@ -16,14 +16,14 @@ Console.WriteLine($"축하합니다, {winnerString}. 당신이 이겼습니다."
 
 
 
-enum Action
+internal enum Action
 {
     Rock,
     Paper,
     Scissors
 }
 
-class Player
+internal class Player
 {
     public string Name { get; }
 
